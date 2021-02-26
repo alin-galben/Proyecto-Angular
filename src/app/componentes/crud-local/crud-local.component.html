@@ -20,7 +20,7 @@
           <input class="form-control" type="text" [(ngModel)] ="notaNueva.titulo" placeholder="Título">
           <input class="form-control" type="text" [(ngModel)] ="notaNueva.contenido" placeholder="Contenido">
         </div>
-        <button class="btn btn-primary btn-block" (click)="insertarNota()">Insertar nota</button>
+        <button class="btn btn-success btn-block" (click)="insertarNota()">Insertar nota</button>
         <ng-template [ngIf]="notaSeleccionada.id!=-1">
           <br>
           <div class="input-group">
@@ -29,7 +29,7 @@
           </div>
           <div class="btn-group btn-block">
             <button class="btn btn-primary" (click)="editarNota(notaSeleccionada)">Editar nota</button>
-            <button class="btn btn-secondary" (click)="notaSeleccionada.id=-1">Cancelar</button>
+            <button class="btn btn-warning" (click)="notaSeleccionada.id=-1">Cancelar</button>
             <button class="btn btn-danger" (click)="borrarNota(notaSeleccionada)">Eliminar nota</button>
           </div>
         </ng-template>

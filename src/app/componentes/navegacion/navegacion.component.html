@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm sticky-top bg-dark">
+<nav class="navbar navbar-light navbar-expand-sm">
   <div class="container">
-    <a class="navbar-brand" routerLink="/"><img src='assets\icons\angular-logo-png.png' width='150px'></a>
+    <a class="navbar-brand" routerLink="/"><img src='assets\icons\AngularJS_logo.svg.png' width='160px'></a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,17 +35,16 @@
                 <a class="nav-link" routerLink="/crud" routerLinkActive="{{estiloActivo}}">Crud</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/listaPerfiles" routerLinkActive="{{estiloActivo}}">
-                    <i></i>Lista de usuarios</a>
+                <a class="nav-link" routerLink="/listaPerfiles" routerLinkActive="{{estiloActivo}}"><i></i>Lista de usuarios</a>
             </li>
         </ul>
         <ul class="navbar-nav mt-2 mt-lg-0">
             <ng-template [ngIf]='!fnLogged()' [ngIfElse]='salir'>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/registro" routerLinkActive="{{estiloActivo}}">Registro</a>
+                <button type="button" class="btn btn-info" routerLink="/registro" routerLinkActive="{{estiloActivo}}">Registro</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/login" routerLinkActive="{{estiloActivo}}"><i></i>Login</a>
+                <button type="button" class="btn btn-success" routerLink="/login" routerLinkActive="{{estiloActivo}}">Login</button>
             </li>
         </ng-template>
         <ng-template #salir>

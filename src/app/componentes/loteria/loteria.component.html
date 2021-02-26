@@ -1,9 +1,9 @@
 <div class="row justify-content-center">
   <div class="col-md-8">
     <div class="card">
-      <div class="card-header">Lotería (Comunicación entre componentes)</div>
+      <div class="card-header">Lotería</div>
       <div class="card-body">
-        <button class="btn btn-primary btn-block" (click)="numero1.obtenAleatorio();numero2.obtenAleatorio()">Hacer una Jugada</button>
+        <button class="btn btn-success btn-block" (click)="numero1.obtenAleatorio();numero2.obtenAleatorio()">Jugar</button>
         <hr>
         <div class="container">
           <div class="row">
@@ -17,11 +17,11 @@
         </div>
         <hr class="py-2">
 
-        <p class="h3 text-center" *ngIf="numero1.digito&&(numero1.digito==numero2.digito); else manolito">HAS GANADO</p>
+        <p class="h3 text-center" style="color:green" *ngIf="numero1.digito&&(numero1.digito==numero2.digito); else manolito">!!!HAS GANADO!!!</p>
         <ng-template #manolito>
-          <p class="h3 text-center" *ngIf="numero1.digito;else primeraJugada">SIGUE JUGANDO</p>
+          <p class="h3 text-center" style="color:red" *ngIf="numero1.digito;else primeraJugada">Has perdido, vuelve a intentarlo...</p>
           <ng-template #primeraJugada>
-            <p class="h3 text-center">Presione el botón para comenzar</p> 
+            <p class="h3 text-center">Presione el botón "Jugar" para comenzar</p> 
           </ng-template>
         </ng-template>
         <p class="text-center" *ngIf="numero1.digito">Los números que se han obtenido son: {{numero1.digito}} {{numero2.digito}}</p>

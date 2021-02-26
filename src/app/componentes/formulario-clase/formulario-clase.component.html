@@ -8,7 +8,7 @@
           <input class="form-control" type="text" placeholder="apellido" [(ngModel)]="user.apellido">
           <input class="form-control" type="number" placeholder="edad" [(ngModel)]="user.edad">
         </div>
-        <button class="btn btn-primary btn-block" (click)= "insertar()">Insertar</button>
+        <button class="btn btn-success btn-block" (click)= "insertar()">Insertar</button>
         <hr>
         <h5 class="text-center" *ngIf="!users.length;else existen">No existen notas</h5>
         <ng-template #existen>

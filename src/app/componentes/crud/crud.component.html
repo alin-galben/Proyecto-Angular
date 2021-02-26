@@ -17,7 +17,7 @@
         <form [formGroup]='formNuevo' (ngSubmit)='crearNota(formNuevo.value)'>
           <input class="form-control" type="text" formControlName="titulo" placeholder="Título">
           <input class="form-control" type="text" formControlName="contenido" placeholder="Contenido">
-          <button class="btn btn-primary btn-block" type="submit" 
+          <button class="btn btn-success btn-block" type="submit" 
             *ngIf='!formNuevo.value.id; else editar' [disabled]='formNuevo.invalid'>Crear nota</button>
           <ng-template #editar>
             <div class="btn-group btn-block">
@@ -35,7 +35,7 @@
         <div class="input-group">
             <input class="form-control" type="text" [(ngModel)]="notaNueva.titulo" placeholder="Título">
             <input class="form-control" type="text" [(ngModel)]="notaNueva.contenido" placeholder="Contenido">
-            <button  class="btn btn-primary btn-block" (click)="crearNota(notaNueva)">Insertar nota</button>
+            <button  class="btn btn-success btn-block" (click)="crearNota(notaNueva)">Insertar nota</button>
         </div>
         <div class="input-group">
             <input (input)='buscarConRetraso()' class="form-control" type="text" [(ngModel)]="busqueda" placeholder="Buscar...">

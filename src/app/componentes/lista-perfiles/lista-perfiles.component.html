@@ -2,25 +2,25 @@
     <div class="card-body">
         <h4 class="card-title">Lista de usuarios registrados</h4>
         <ul>
-            <li (click)='usuarioSel=user; formMensaje.patchValue({idDestinatario:user.id})' *ngFor='let user of usuarios'>{{user.nombre}} {{user.email}}
-                <img src="{{user.imgSrc? user.imgSrc : 'assets/images/no-img.png'}}" width='40px'>
+            <li (click)='usuarioSel=user; formMensaje.patchValue({idDestinatario:user.id})' *ngFor='let user of usuarios'>{{user.nombre}} / Email: {{user.email}}
+                <img src="{{user.imgSrc?  user.imgSrc : 'assets/images/1.jpg'}}" width='30px'>
             </li>
         </ul>
     </div>
 </div>
 <div class="card" *ngIf='usuarioSel'>
-    <div class="card-body">
-        <h4 class="card-title">nombre</h4>
-        <p class="card-text">{{usuarioSel.nombre}}</p>
-        <h4 class="card-title">apellidos</h4>
-        <p class="card-text">{{usuarioSel.apellidos}}</p>
-        <h4 class="card-title">email</h4>
-        <p class="card-text">{{usuarioSel.email}}</p>
+    <div class="list-group-item">
+        <p class="card-text">Nombre: {{usuarioSel.nombre}}</p>
+        <p class="card-text">Apellidos: {{usuarioSel.apellidos}}</p>
+        <p class="card-text">Email: {{usuarioSel.email}}</p>
     </div>
     <div class="card-body">
         <form [formGroup]='formMensaje' (submit)='escribirMensaje()'>
-            <input type="text" formControlName='mensaje' placeholder='escribe tu mensaje'>
-            <button type='submit' [disabled]='!formMensaje.valid'>Enviar mensaje</button>
+            <div class="form-group">
+              <label for=""></label>
+              <textarea class="form-control" name="" id="" rows="3" formControlName='mensaje' placeholder='Escribe tu mensaje...'></textarea>
+            </div>
+            <button class='btn btn-primary' type='submit' [disabled]='!formMensaje.valid'>Enviar</button>
         </form>
     </div>
 </div>

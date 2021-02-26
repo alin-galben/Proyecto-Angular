@@ -8,12 +8,12 @@ import { Usuario } from 'src/app/clases/usuario';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  variable: string= "texto de prueba"
+  variable: string= ""
   num1: number = null
   usuarios = [
-    {nombre: "Manolo", apellido: "López"},
-    {nombre: "Rocío", apellido: "García"},
-    {nombre: "Filomena", apellido: "Borrasca"}
+    {nombre: "Alin", apellido: "Galben "},
+    {nombre: "Fernando", apellido: "Alonso"},
+    {nombre: "Javier", apellido: "Rodriguez"}
   ]
   usuarios2: Usuario[] =[
     {nombre: "Manolo", apellido: "López"},
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {nombre: "Filomena", apellido: "Borrasca"}
   ]
   usuarioSel
-  usuario3: Usuario = new Usuario("Regina", "Marin")
+  usuario3: Usuario = new Usuario("Alin", "Galben")
   selUser(entrada):void{
     this.usuarioSel=entrada
   }
@@ -31,6 +31,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
   }
   ngOnDestroy(): void{
-    console.log("Hasta luego Maricarmen")
+    console.log("Adios")
   }
 }

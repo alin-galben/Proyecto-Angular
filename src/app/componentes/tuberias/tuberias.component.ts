@@ -6,17 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tuberias.component.css']
 })
 export class TuberiasComponent implements OnInit {
-  usuario: string="regina marín cabrillana"
+  usuario: string="usuario"
   mes: string = "ENERO"
-  texto: string = "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+  texto: string = ""
   fecha: Date = new Date()
-  dinero: number =12.40
+  dinero: number =2.3
   numero_pi: number = Math.PI
   preposiciones: string[] = ['a', 'ante', 'bajo', 'cabe', 'con', 'contra', 'de', 'desde', 'en', 'entre']
   usuarios =[
-    {nombre: "Regina", apellido: "Marín", edad: 17},
-    {nombre: "Cristina", apellido: "García", edad: 32},
-    {nombre: "Rodolfo", apellido: "Chiquiliquatre", edad: 41}
+    {nombre: "usuario 1", apellido: "1", edad: 565},
+    {nombre: "usuario 2", apellido: "2", edad: 45},
+    {nombre: "usuario 3", apellido: "3", edad: 74}
   ]
   dni: number = 0
   constructor() { }

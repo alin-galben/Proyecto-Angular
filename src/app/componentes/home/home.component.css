@@ -1,10 +1,20 @@
-.list-group-item{
-  font-size: 1.3em;
-  font-style: italic;
+.jumbotron {
+	border-radius: 5px;
+	background-image: url(https://www.stuffside.com/wp-content/uploads/2018/10/Mountains-Minimal-Artwork-5K-Wallpaper-5120x2880.jpg?x76452);
+	color: white;
+	background-size: cover;
+	position: relative;
 }
 
-.jumbotron{
-  padding : 4rem 2rem;
-  border-radius: 1em;
-  font-family: 'Ballet', cursive;
+.list-group-item:hover {
+	background-color: lightblue;
+	cursor: pointer;
+}
+
+.list-group-item:active {
+	background-color: rgb(70, 145, 170);
+}
+
+.card-text {
+	font-size: 50px;
 }

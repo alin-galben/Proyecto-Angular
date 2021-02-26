@@ -1,26 +1,31 @@
-<div class="jumbotron mt-n5">
-  <h1 class="display-3 text-center">Bienvenid@ a la pagina de Inicio</h1>
+<div class="jumbotron">
+  <h1 class="display-6 text-center">Bienvenid@ a la pagina de Inicio</h1>
   <p class="lead text-center">Curso de Angular para la asignatura de DAW</p>
   <hr>
   <p class="lead text-center">
-    Este es un link de enlace  <a class="btn btn-primary" routerLink="/about" role="button">About</a>
+    Este es un link de enlace  <a class="" routerLink="/about" role="button">Enlace</a>
   </p>
 </div>
-<div class="row justify-content-center pb-5 mt-n5">
-  <div class="col-md-8">
+<div class="row justify-content-center">
+  <div class="col">
     <div class="card">
       <div class="card-header">Pruebas Iniciales</div>
       <div class="card-body">
         <div class="input-group">
-          <input class="form-control" type="text" [(ngModel)]="variable">
-          <h3>{{variable}}</h3>
+          <input class="form-control" placeholder="Texto..." type="text" [(ngModel)]="variable"><br>
         </div>
-        <hr>
+        <div class="card text-left">
+          <div class="card-body">
+            <h5>Aqui tiene que aparecer el texto...</h5>
+            <p class="card-text" style="text-align: center;">{{variable}}</p>
+          </div>
+        </div><br>
+        <hr><br>
         <div class="input-group">
           <input class="form-control" placeholder="Introduce un número" type="number" [(ngModel)]="num1">
-          <h3 *ngIf="num1==0">El número 1 es un 0</h3>
-          <h3 *ngIf="num1!=0">El número 1 no es un 0</h3>
-        </div>
+        </div><br>
+        <h3 *ngIf="num1==0">El número 1 es un 0</h3>
+        <h3 *ngIf="num1!=0">El número 1 no es un 0</h3><br>
         <hr>
         <h4 *ngIf="usuarioSel">El usuario seleccionado es {{usuarioSel.nombre +" "+ usuarioSel.apellido}}</h4>
         <h4 *ngIf="!usuarioSel">Selecciona un usuario</h4>

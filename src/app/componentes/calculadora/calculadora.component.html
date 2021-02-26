@@ -3,13 +3,11 @@
     <div class="card">
       <div class="card-header">Tablas de Multiplicar</div>
       <div class="card-body">
-        <input class="form-control" placeholder="Introduce un número" type="number" [(ngModel)]="num_entrada">
-        <div class="btn-group mt-2">
-          <a class="btn btn-primary" routerLink="/multiplicar/{{num_entrada}}" [class.disabled]="!num_entrada">
-            Mostrar tabla a través del RouterLink</a>
-          <button class="btn btn-primary" (click)="navegarHacia(num_entrada)" [disabled]="!num_entrada">
-            Mostrar tabla a través del módulo Router</button>
-        </div>
+        <input class="form-control" style="text-align: center;" placeholder="Introduce un número" type="number" [(ngModel)]="num_entrada"><br>
+          <a class="btn btn-success btn-block" routerLink="/multiplicar/{{num_entrada}}" [class.disabled]="!num_entrada">
+            RouterLink</a>
+          <button class="btn btn-success btn-block" (click)="navegarHacia(num_entrada)" [disabled]="!num_entrada">
+            Router</button>
       </div>
     </div>
   </div>
